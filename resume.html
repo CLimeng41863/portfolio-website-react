@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Limeng Chhuon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            main {
+                box-shadow: none !important;
+            }
+        }
+
+        main {
+            max-width: 210mm;
+            margin: auto;
+            background: white;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <main class="p-10 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-lg rounded-lg">
+
+        <!-- Left Column -->
+        <aside class="md:col-span-1 space-y-9">
+            <!-- Name -->
+            <div>
+                <h1 class="text-4xl font-bold text-purple-700 leading-tight">Limeng Chhuon</h1>
+                <p class="text-lg text-gray-700">Senior Frontend Developer</p>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800 border-b pb-1 mb-2">Contact Me</h2>
+                <ul class="text-sm space-y-1">
+                    <li>Email : <a href="mailto:limeng@gmail.com"
+                            class="text-blue-600 hover:underline">limeng@gmail.com</a></li>
+                    <li>Phone : +(855) 965-057-200</li>
+                    <li>Location : CC 3, PP, Cambodia</li>
+                    <li>LinkedIn : <a href="https://linkedin.com/in/limeng-chhuon-004a51328"
+                            class="text-blue-600 hover:underline">limeng-chhuon</a></li>
+                    <li>GitHub : <a href="https://github.com/CLimeng41863"
+                            class="text-blue-600 hover:underline">CLimeng41863</a></li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800 border-b pb-1 mb-2">Education</h2>
+                <p class="text-sm">
+                    <span class="font-semibold">B.Sc. in Computer Science</span><br />
+                    Royal University of Phnom Penh<br />
+                    2016 - 2020 | Phnom Penh, Cambodia
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800 border-b pb-1 mb-2">Skills</h2>
+                <ul class="text-sm grid grid-cols-1 gap-y-2.5 list-disc list-inside">
+                    <li>React / Next.js</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>UI/UX Design</li>
+                    <li>Graphic Design</li>
+                    <li>Git / Vite / npm</li>
+                    <li>Mentoring</li>
+                    <li>Map Embeds</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Right Column -->
+        <section class="md:col-span-2 space-y-10">
+            <!-- Work Experience -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Work Experience</h2>
+
+                <!-- Job 1 -->
+                <div class="mb-6">
+                    <h3 class="font-bold text-purple-700">Senior Frontend Developer — Tech Inc.</h3>
+                    <p class="text-sm text-gray-600">2022 - Present | Phnom Penh, Cambodia</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Led UI design and implementation for client-facing platforms with a focus on accessibility.
+                        </li>
+                        <li>Mentored junior developers and conducted structured code reviews.</li>
+                        <li>Built reusable components with React and Tailwind, improving development speed.</li>
+                        <li>Integrated map features and location markers to enhance user context.</li>
+                        <li>Resolved complex issues in Vite, npm, and Git environments, ensuring smooth deployments.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="mb-6">
+                    <h3 class="font-bold text-purple-700">Frontend Developer — Freelance Projects</h3>
+                    <p class="text-sm text-gray-600">2020 – 2022 | Remote</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Designed and deployed portfolio sites with embedded maps and custom UI components.</li>
+                        <li>Created minimalist gradient-based buttons and reusable design systems.</li>
+                        <li>Collaborated with clients to refine branding and visual identity.</li>
+                        <li>Delivered responsive, accessible websites using modern frontend stacks.</li>
+                    </ul>
+                </div>
+
+                <!-- Internship -->
+                <div>
+                    <h3 class="font-bold text-purple-700">Intern — Local Tech Studio</h3>
+                    <p class="text-sm text-gray-600">2019 – 2020 | Phnom Penh</p>
+                    <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                        <li>Assisted in UI prototyping and component testing.</li>
+                        <li>Learned practical deployment workflows and version control.</li>
+                        <li>Contributed to internal design system documentation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Interests -->
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Interests</h2>
+                <p class="text-sm leading-relaxed">
+                    Passionate about creative visual projects, minimalist UI design, and teaching technical concepts.
+                    Enjoy refining portfolio sites, experimenting with gradients, and embedding real-world context into
+                    digital experiences.
+                    Always exploring new ways to blend design and engineering for clarity, elegance, and authenticity.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

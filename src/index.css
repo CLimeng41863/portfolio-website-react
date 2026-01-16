@@ -1,0 +1,204 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap");
+
+/* TAILWIND */
+@import "tailwindcss";
+
+/* THEME TOKENS — PREMIUM NEON */
+@theme {
+  /* Core backgrounds */
+  --color-background: #0b0e14;      /* deep midnight */
+  --color-foreground: #e9ecf1;      /* soft white */
+
+  --color-card: #111623;
+  --color-surface: #141a2a;
+
+  /* Brand gradient system */
+  --color-primary: #7b4fc1;         /* royal purple */
+  --color-secondary: #0097fc;       /* clean blue */
+
+  /* Accent / glow */
+  --color-highlight: #00cffc;       /* neon cyan */
+  --color-accent: #4dfce0;          /* aqua mint */
+
+  /* Foregrounds */
+  --color-primary-foreground: #ffffff;
+  --color-secondary-foreground: #dbeafe;
+
+  /* Muted UI */
+  --color-muted: #1a2033;
+  --color-muted-foreground: #8a91a8;
+
+  /* Borders */
+  --color-border: #202748;
+
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+/* BASE STYLES */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* COMPONENTS */
+@layer components {
+  .glass {
+    background-color: color-mix(
+      in srgb,
+      var(--color-surface) 55%,
+      transparent
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid
+      color-mix(in srgb, var(--color-border) 60%, transparent);
+  }
+
+  .glass-strong {
+    background-color: color-mix(
+      in srgb,
+      var(--color-surface) 80%,
+      transparent
+    );
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid
+      color-mix(in srgb, var(--color-border) 70%, transparent);
+  }
+
+  .glow-text {
+    text-shadow:
+      0 0 24px color-mix(in srgb, var(--color-highlight) 45%, transparent),
+      0 0 48px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+
+  .glow-border {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-highlight) 25%, transparent),
+      inset 0 0 20px
+        color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+}
+
+/* UTILITIES & ANIMATIONS */
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes slow-drift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(16px, -24px);
+    }
+    50% {
+      transform: translate(-12px, -18px);
+    }
+    75% {
+      transform: translate(24px, 10px);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+    will-change: opacity, transform;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+
+  /* Animation Delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+
+  @keyframes animated-border {
+    from {
+      stroke-dashoffset: 400;
+    }
+    to {
+      stroke-dashoffset: -550;
+    }
+  }
+
+  .group:hover .animated-border-path {
+    animation: animated-border 1.5s linear infinite;
+  }
+
+  .animated-border:hover {
+    background-color: color-mix(
+      in srgb,
+      var(--color-secondary) 18%,
+      transparent
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:
+      0 0 22px color-mix(in srgb, var(--color-highlight) 30%, transparent);
+  }
+
+  .timeline-glow {
+    box-shadow:
+      0 0 40px color-mix(in srgb, var(--color-highlight) 35%, transparent),
+      0 0 80px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+}
